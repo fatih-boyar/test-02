@@ -1,0 +1,23 @@
+---
+title: "markdown1"
+output: html_document
+---
+This is the first rmarkdown test for this repository
+I will print this as an HTML file 
+
+```{r}
+print("Hello Git from Markdown file")
+```
+
+```{r}
+library(tidyverse)
+library(ggplot2)
+```
+
+```{r}
+set.seed(1)
+random1 <- rnorm(500)
+data.frame(random1) %>% 
+  ggplot(aes(random1)) +
+  geom_histogram(binwidth = .1)
+```
